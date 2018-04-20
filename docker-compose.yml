@@ -11,15 +11,15 @@ services:
             - MYSQL_USER=${MYSQL_USER}
             - MYSQL_PASSWORD=${MYSQL_PASSWORD}
             - MYSQL_ROOT_HOST=%
-   api:
+   shortner-web:
         depends_on:
             - db
         volumes:
-            - ./api:/usr/src/api
+            - ./shortner-web:/usr/src/api
         links:
             - db:${MYSQL_HOST}
         build:
-            context: api 
+            context: shortner-web 
         environment:
             - DATABASE_URL=mysql://root:${MYSQL_ROOT_PASSWORD}@${MYSQL_HOST}:3306/${MYSQL_DATABASE}
         ports:

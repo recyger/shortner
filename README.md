@@ -4,9 +4,14 @@
 Шифрования производится на основе словаря и библиотеки https://github.com/recyger/encry-int.git
 
 # Установка
-
+Клонирование репозитария
 ```
-docker-compose up
+git clone --recursive https://github.com/recyger/shortner.git
+```
+
+Запуск сервиса
+```
+docker-compose up --build
 ```
 
 # Использованиие

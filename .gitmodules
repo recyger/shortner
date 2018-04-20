@@ -1,0 +1,3 @@
+[submodule "shortner-web"]
+	path = shortner-web
+	url = https://github.com/recyger/shortner-web.git
